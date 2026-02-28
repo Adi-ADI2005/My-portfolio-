@@ -41,10 +41,9 @@ Live Demo
 ```
 🔗 https://adi--portfolio.web.app/
 ```
-```
 👨‍💻 Author
 
 Aditya Mishra.
 Frontend Developer | React Enthusiast
-`````
+
 If you like this project, feel free to give it a star on GitHub!
