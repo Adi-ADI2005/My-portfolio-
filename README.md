@@ -1,20 +1,31 @@
+# 🌐 My Portfolio 
 
-My Portfolio – React JS
+Welcome to my personal portfolio website built using **React JS**.  
+This project showcases my skills, projects, and experience as a frontend developer through a modern, responsive, and user-friendly interface.
 
-Welcome to my personal portfolio website built using React JS.
-This project showcases my skills, projects, and experience as a frontend developer with a modern and responsive design.
+---
 
-🚀 Tech Stack
+## 🚀 Tech Stack
 
-⚛️ React JS
+- ⚛️ React JS  
+- 🎨 CSS / Bootstrap  
+- 🔥 Firebase Hosting  
+- 📦 Node.js & npm  
 
-🎨 CSS / Bootstrap
+---
 
-🔥 Firebase (Hosting)
+## ✨ Features
 
-📦 Node.js & npm
+- Fully Responsive Design  
+- Modern UI with Smooth Animations  
+- Projects Showcase Section  
+- Skills & About Me Section  
+- Contact Section  
+- Firebase Hosting Integration  
+
+---
 ```
-📂 Project Structure
+## 📂 Project Structure
 my-app/
 │── public/
 │── src/
@@ -26,25 +37,14 @@ my-app/
 │── package-lock.json
 │── README.md
 ```
-✨ Features
-
-Fully Responsive Design
-
-Modern UI with Smooth Animations
-
-Projects Showcase Section
-
-Skills & About Me Section
-
-Contact Section
-
-Firebase Hosting Integration
-
-
-
-🌍 Live Demo
-https://adi--portfolio.web.app/
-
+Live Demo
+```
+🔗 https://adi--portfolio.web.app/
+```
+```
 👨‍💻 Author
-Aditya Mishra
+
+Aditya Mishra.
 Frontend Developer | React Enthusiast
+`````
+If you like this project, feel free to give it a star on GitHub!
