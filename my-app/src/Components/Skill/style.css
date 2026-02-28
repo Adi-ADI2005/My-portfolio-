@@ -1,0 +1,219 @@
+/* ============================
+   Skill Section Base Styles
+============================ */
+.skill-cont {
+    color: white;
+    padding: 5% 0;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+    height: 100%;
+    background-color: #0d0d0d;
+    padding-left: 2%;
+    padding-right: 2%;
+}
+
+/* Section Header */
+.skill-cont .skill-tital {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    margin-bottom: 2rem;
+    flex-wrap: wrap;
+}
+
+.skill-cont .skill-tital h2 {
+    font-size: 4.5rem;
+    font-weight: 700;
+    color: #75f94c;
+}
+
+.skill-cont .spic img {
+    width: 100px;
+    height: 80px;
+}
+
+/* Description */
+.skill-cont p {
+    font-size: 0.9rem;
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+/* Section Titles & Skill Images */
+.skill-cont .row .pic1 img,
+.skill-cont .row .pic2 img,
+.skill-cont .row .pic3 img,
+.skill-cont .row .pic4 img {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    margin-bottom: 0.5rem;
+}
+
+/* ============================
+   Skill Icon Grid Containers
+============================ */
+.cimg,
+.fimg,
+.dimg,
+.mlimg {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 25px;
+    margin-top: 1rem;
+    margin-bottom: 50px;
+}
+
+/* ============================
+   Skill Icon Styles
+============================ */
+.skill-icon {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    background-color: #222;
+    cursor: pointer;
+    transition: transform 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.skill-icon img {
+    width: 60%;
+    height: 60%;
+    object-fit: contain;
+    border-radius: 50%;
+    transition: transform 0.3s ease;
+}
+
+/* Scale effect on hover */
+.skill-icon:hover {
+    transform: scale(1.2);
+    background-color: #333;
+    box-shadow: 0 0 15px #75f94c;
+}
+
+/* ============================
+   Tooltip to Show Skill Name
+============================ */
+.skill-icon::after {
+    content: attr(data-name);  
+    position: absolute;
+    top: -30px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #333;
+    color: #fff;
+    padding: 4px 8px;
+    font-size: 12px;
+    border-radius: 4px;
+    white-space: nowrap;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    z-index: 999;
+}
+
+.skill-icon:hover::after {
+    opacity: 1;
+    transform: translateX(-50%) translateY(-5px);
+}
+
+/* ==== STAR BACKGROUND EFFECT ==== */
+.stars {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    z-index: 0;
+    pointer-events: none;
+}
+
+.star {
+    position: absolute;
+    background: white;
+    border-radius: 50%;
+    width: 2px;
+    height: 2px;
+    animation: twinkle 2s infinite ease-in-out;
+    opacity: 0.8;
+}
+
+@keyframes twinkle {
+    0%, 100% {
+        opacity: 0.2;
+        transform: scale(1);
+    }
+    50% {
+        opacity: 1;
+        transform: scale(1.5);
+    }
+}
+
+/* ============================
+   Responsive Styles
+============================ */
+@media screen and (max-width: 992px) {
+    .skill-cont .skill-tital h2 {
+        font-size: 3.5rem;
+    }
+    .skill-cont .spic img {
+        width: 90px;
+        height: 70px;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .skill-cont .skill-tital {
+        flex-direction: column;
+        gap: 15px;
+        text-align: center;
+    }
+
+    .skill-cont .skill-tital h2 {
+        font-size: 3rem;
+        font-weight: 500;
+    }
+
+    .skill-cont .spic img {
+        width: 80px;
+        height: 60px;
+    }
+
+    .skill-icon {
+        width: 55px;
+        height: 55px;
+    }
+
+    .skill-icon img {
+        width: 60%;
+        height: 60%;
+    }
+
+    .cimg, .fimg, .dimg, .mlimg {
+        gap: 20px;
+        margin-bottom: 40px;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .skill-cont .skill-tital h2 {
+        font-size: 2.5rem;
+    }
+
+    .skill-cont .spic img {
+        width: 70px;
+        height: 50px;
+    }
+
+    .skill-icon {
+        width: 50px;
+        height: 50px;
+    }
+}

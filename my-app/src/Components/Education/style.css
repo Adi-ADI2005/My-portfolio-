@@ -1,0 +1,105 @@
+.education-section {
+  padding: 50px 20px;
+  background: radial-gradient(circle at top left, #1a1a1a, #0d0d0d);
+  color: #fff;
+  text-align: center;
+}
+
+.education-section h1 {
+  font-size: 3rem;
+  font-weight: 700;
+  color: #75f94c;
+  margin-bottom: 50px;
+}
+
+/* Cards Container */
+.education-cards {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  align-items: center;
+}
+
+/* Individual Card */
+.education-item {
+  display: flex;
+  align-items: center;
+  background: #1b1b1b;
+  border: 2px solid #75f94c;
+  border-radius: 15px;
+  padding: 20px 25px;
+  max-width: 700px;
+  width: 100%;
+  gap: 20px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.education-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0 20px rgba(117, 249, 76, 0.3);
+}
+
+/* Image */
+.edu-icon {
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 2px solid #75f94c;
+  flex-shrink: 0;
+}
+
+/* Text Content */
+.edu-text {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  text-align: left;
+}
+
+.edu-text h5 {
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: #75f94c;
+  margin-bottom: 5px;
+}
+
+.edu-text p {
+  font-size: 1rem;
+  color: #ccc;
+  margin: 0 0 5px 0;
+}
+
+.year {
+  font-size: 1rem;
+  font-weight: 500;
+  color: #00bfff;
+}
+
+/* === Responsive === */
+@media (max-width: 768px) {
+  .education-item {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 15px 20px;
+  }
+
+  .edu-icon {
+    width: 60px;
+    height: 60px;
+    margin-bottom: 10px;
+  }
+
+  .edu-text h5 {
+    font-size: 1.2rem;
+  }
+
+  .edu-text p {
+    font-size: 0.95rem;
+  }
+
+  .year {
+    margin-top: 10px;
+  }
+}

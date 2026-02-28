@@ -1,0 +1,192 @@
+/* ===== Section Background ===== */
+.exp-section {
+  padding: 50px 20px;
+  min-height: 100vh;
+  background: radial-gradient(circle at top left, #0d0d0d, #1a1a1a);
+  font-family: 'Poppins', sans-serif;
+  color: #fff;
+}
+
+.exp-section h1 {
+  text-align: center;
+  margin-bottom: 60px;
+  font-size: 2.5rem;
+  color: #75f94c; /* Normal green */
+  text-shadow: none;
+}
+
+/* ===== Content Layout ===== */
+.exp-content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 40px;
+}
+
+/* ===== Glass/Futuristic Card ===== */
+.exp-card {
+  background: rgba(20, 20, 20, 0.6);
+  backdrop-filter: blur(10px);
+  border-radius: 20px;
+  border: 2px solid #39ff14;
+  width: 350px;
+  padding: 20px;
+  box-shadow: 0 0 15px rgba(57, 255, 20, 0.5), 0 0 25px rgba(0, 255, 255, 0.3);
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  transition: transform 0.4s, box-shadow 0.4s;
+}
+.proj-description {
+  text-align: center;
+  font-size: 0.95rem;
+  color: #ccc;
+  margin: 5px 0 15px 0;
+  font-style: italic;
+}
+
+.exp-card:hover {
+  transform: translateY(-10px) rotateX(2deg) rotateY(2deg);
+  box-shadow: 0 0 30px rgba(57, 255, 20, 0.8), 0 0 40px rgba(0, 255, 255, 0.6);
+}
+
+/* ===== Project Image ===== */
+.project-bg {
+  border-radius: 15px;
+  overflow: hidden;
+  border: 2px solid #00ffff;
+  transition: transform 0.5s, box-shadow 0.5s;
+}
+
+.project-bg:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 20px #39ff14, 0 0 30px #00ffff;
+}
+
+.project-img {
+  width: 100%;
+  display: block;
+  border-radius: 15px;
+}
+
+/* ===== Project Title ===== */
+.exp-card h5 {
+  text-align: center;
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: #75f94c; /* Normal green */
+  text-shadow: none; /* remove glow */
+  margin-bottom: 15px;
+}
+
+/* ===== Project Info Sections ===== */
+.proj-info {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.proj-info h6 {
+  font-size: 1rem;
+  margin: 0;
+  padding: 6px 10px;
+  border-left: 4px solid #39ff14;
+  background: rgba(0, 255, 255, 0.1);
+  color: #00ffff;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  border-radius: 5px;
+}
+
+.proj-info p {
+  font-size: 0.95rem;
+  line-height: 1.5;
+  color: #ccc;
+  margin-left: 10px;
+}
+
+/* ===== Buttons ===== */
+.contact-item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  margin-top: 15px;
+}
+
+.click-button {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-weight: bold;
+  font-size: 0.95rem;
+  padding: 10px 22px;
+  border-radius: 10px;
+  border: 2px solid #00ffff;
+  background: rgba(0, 0, 0, 0.5);
+  color: #00ffff;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-decoration: none;
+  text-align: center;
+}
+
+.click-button:hover {
+  background: linear-gradient(90deg, #39ff14, #00ffff);
+  color: #000;
+  box-shadow: 0 0 10px #39ff14, 0 0 15px #00ffff;
+}
+
+/* Github Button */
+.github-btn {
+  border-color: #fff;
+  color: #fff;
+}
+
+.github-btn:hover {
+  background: #fff;
+  color: #24292f;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .exp-content {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .exp-card {
+    width: 90%;
+  }
+}
+
+/* =========================== */
+/*   TECHNOLOGY TAGS STYLING   */
+/* =========================== */
+
+.tech-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 8px;
+}
+
+.tech-tag {
+  background: rgba(0, 149, 255, 0.18);
+  border: 1px solid rgba(0, 149, 255, 0.4);
+  padding: 6px 14px;
+  border-radius: 30px;
+  font-size: 14px;
+  color: #d8e9ff;
+  font-weight: 500;
+  display: inline-block;
+  backdrop-filter: blur(3px);
+  transition: 0.3s ease;
+}
+
+.tech-tag:hover {
+  background: rgba(0, 149, 255, 0.35);
+  transform: translateY(-2px);
+}
