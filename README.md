@@ -38,9 +38,8 @@ my-app/
 │── README.md
 ```
 Live Demo
-```
-🔗 https://adi--portfolio.web.app/
-```
+
+🔗 https://adi--portfolio.web.app
 ```
 👨‍💻 Author
 
