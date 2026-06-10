@@ -5,19 +5,20 @@ import Talent from '../../assets/image/talent.jpeg';
 export default function Educationcomponents() {
   const educationData = [
     {
-      title: "Intermediate",
-      institute: "Talent's Koraput, Koraput, Odisha",
-      course: "Science (Physics, Chemistry, Mathematics & Biology)",
-      year: "2021 - 2023",
-      image: Talent,
-    },
-    {
       title: "Engineering",
       institute: "GIET University, Gunupur, Rayagada, Odisha",
       course: "Computer Science Engineering in AI & ML",
-      year: "2023 - Continue",
+      year: "2023 – Present",
       image: Giet,
     },
+    {
+      title: "Intermediate",
+      institute: "Talent's Koraput, Koraput, Odisha",
+      course: "Science — Physics, Chemistry, Mathematics & Biology",
+      year: "2021 – 2023",
+      image: Talent,
+    },
+    
   ];
 
   return (
@@ -32,6 +33,7 @@ export default function Educationcomponents() {
               <p>{edu.course}</p>
               <span className="year">{edu.year}</span>
             </div>
+            <span className="edu-year-badge">{edu.year}</span>
           </div>
         ))}
       </div>

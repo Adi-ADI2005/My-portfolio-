@@ -29,37 +29,35 @@ export default function ExpConpo() {
       problem: "Farmers struggle to pick optimal crops.",
       solution: "Predicts crops + weather forecast + AI chatbot.",
       impact: "Improves productivity & reduces loss.",
-      technology: "Python, Flask, scikit-learn, Pandas, Numpy, HTML, CSS,  Bootstrap, JavaScript, open AI API, OpenWeather API, Mongodb ,AI chatbot",
+      technology: "Python, Flask, scikit-learn, Pandas, Numpy, HTML, CSS, Bootstrap, JavaScript, open AI API, OpenWeather API, Mongodb, AI chatbot",
       github: "https://github.com/Adi-ADI2005/FarmTech-.git",
       liveDemo: "#",
     },
     {
       title: "AcciAlartAi",
-      description: "AcciAlartAi is a machine learning-based system that predicts accident severity using road and weather details.",
+      description: "ML-based system that predicts accident severity using road and weather details.",
       image: Accident,
-      problem: "Road accidents cause major loss of life, and it is difficult to quickly assess how severe an accident might be..",
-      solution: "The system takes inputs like weather condition, road junction type, and road condition to predict severity as Minor, Major, or Fatal.",
-      impact: "It helps authorities and drivers take faster safety measures and improve emergency response planning.",
-      technology: "HTML, CSS, Bootstrap, JavaScript, MongoDB,Flask, scikit-learn, Pandas, Numpy",
+      problem: "Difficult to quickly assess how severe an accident might be.",
+      solution: "Takes inputs like weather, road junction type to predict severity.",
+      impact: "Helps authorities take faster safety measures.",
+      technology: "HTML, CSS, Bootstrap, JavaScript, MongoDB, Flask, scikit-learn, Pandas, Numpy",
       github: "https://github.com/Adi-ADI2005/AcciAlart-AI.git",
       liveDemo: "#",
-
     },
     {
       title: "Netflix Clone",
-      description: "Frontend Netflix clone using React.",
+      description: "Frontend Netflix clone built with React.",
       image: Netflix,
       problem: "Streaming UI personalization is difficult.",
       solution: "Smooth responsive React UI.",
-      impact: "Shows frontend development skills.",
+      impact: "Demonstrates advanced frontend skills.",
       technology: "React, CSS, Bootstrap, HTML",
       github: "https://github.com/Adi-ADI2005/Netflix-clone",
       liveDemo: "#",
     },
-    
     {
       title: "Home Sathi AI",
-      description: "Real estate price prediction using ML.",
+      description: "Real estate price prediction using machine learning.",
       image: Homesathi,
       problem: "Property prices fluctuate unpredictably.",
       solution: "Flask + ML for accurate predictions.",
@@ -75,24 +73,24 @@ export default function ExpConpo() {
       problem: "Manual plagiarism checking is slow.",
       solution: "Flask + AI similarity detection.",
       impact: "Ensures originality.",
-      technology: "HTML, CSS, Bootstrap, JavaScript, Python, Flask, AI ,SERP API KEY , SAPLING API KEY ",
+      technology: "HTML, CSS, Bootstrap, JavaScript, Python, Flask, AI, SERP API, SAPLING API",
       github: "https://github.com/Adi-ADI2005/AICheckMate",
       liveDemo: "#",
     },
     {
       title: "Kisansathi AI",
-      description: "Predicts top 3 crops + market prices.",
+      description: "Predicts top 3 crops + real-time market prices.",
       image: Kisansathi,
       problem: "Hard to choose profitable crops.",
       solution: "ML crop prediction + market data.",
       impact: "Improves farmer profit.",
-      technology: "React JS, CSS, Bootstrap, Python, Flask, scikit-learn, OpenWeather API, AGMARKNET API ",
+      technology: "React JS, CSS, Bootstrap, Python, Flask, scikit-learn, OpenWeather API, AGMARKNET API",
       github: "https://github.com/Adi-ADI2005/KisanSathi-AI",
       liveDemo: "#",
     },
     {
       title: "Ecom",
-      description: "Full e-commerce platform.",
+      description: "Full-featured e-commerce platform.",
       image: Ecom,
       problem: "Small businesses lack online stores.",
       solution: "Java Spring Boot + MySQL + Admin panel.",
@@ -103,9 +101,9 @@ export default function ExpConpo() {
     },
     {
       title: "MedicAI",
-      description: "AI medicine recommendation system.",
+      description: "AI-powered medicine recommendation system.",
       image: MadicAi,
-      problem: "Finding correct medicine is slow.",
+      problem: "Finding the correct medicine is slow.",
       solution: "Flask + Dataset based recommendation.",
       impact: "Improves healthcare accuracy.",
       technology: "HTML, CSS, Bootstrap, Python, Flask, Pandas, NumPy, pickle",
@@ -116,8 +114,9 @@ export default function ExpConpo() {
 
   return (
     <section className="exp-section">
-      <h1>My Projects</h1>
+      <h1>My <span>Projects</span></h1>
 
+      <div className="exp-scroll-wrap">
       <div className="exp-content">
         {projects.map((proj, index) => (
           <div className="exp-card" key={index}>
@@ -139,14 +138,11 @@ export default function ExpConpo() {
               <p>{proj.impact}</p>
 
               <h6>⚡ Technology</h6>
-
-              {/* TECHNOLOGY TAGS */}
               <div className="tech-list">
-  {proj.technology.split(",").map((tech, i) => (
-    <span className="tech-tag" key={i}>{tech.trim()}</span>
-  ))}
-</div>
-
+                {proj.technology.split(",").map((tech, i) => (
+                  <span className="tech-tag" key={i}>{tech.trim()}</span>
+                ))}
+              </div>
             </div>
 
             <div className="contact-item">
@@ -156,18 +152,19 @@ export default function ExpConpo() {
                 rel="noopener noreferrer"
                 className="click-button github-btn"
               >
-                <i className="fab fa-github"></i> GitHub
+                <i className="bi bi-github"></i> GitHub
               </a>
 
               <button
                 className="click-button live-btn"
                 onClick={() => alert("Live demo coming soon!")}
               >
-                <i className="fas fa-external-link-alt"></i> Live Demo
+                <i className="bi bi-box-arrow-up-right"></i> Live Demo
               </button>
             </div>
           </div>
         ))}
+      </div>
       </div>
     </section>
   );

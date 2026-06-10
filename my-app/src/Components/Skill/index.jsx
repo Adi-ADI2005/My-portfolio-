@@ -27,74 +27,86 @@ import Pandas from '../../assets/skil-img/Pandas.png';
 import Numpy from '../../assets/skil-img/NumPy.png';
 import Sklearn from '../../assets/skil-img/scikit-learn.png';
 
+const categories = [
+  {
+    img: coding,
+    title: "Coding Skills",
+    containerClass: "cimg",
+    icons: [
+      { src: C, alt: "C", name: "C" },
+      { src: Python, alt: "Python", name: "Python" },
+      { src: Java, alt: "Java", name: "Java" },
+    ],
+  },
+  {
+    img: fullstack,
+    title: "Frontend",
+    containerClass: "fimg",
+    icons: [
+      { src: Html, alt: "HTML", name: "HTML" },
+      { src: Css, alt: "CSS", name: "CSS" },
+      { src: Js, alt: "JavaScript", name: "JavaScript" },
+      { src: Bootstrap, alt: "Bootstrap", name: "Bootstrap" },
+      { src: ReactLogo, alt: "React", name: "React" },
+    ],
+  },
+  {
+    img: db,
+    title: "Backend & DB",
+    containerClass: "dimg",
+    icons: [
+      { src: Flask, alt: "Flask", name: "Flask" },
+      { src: Django, alt: "Django", name: "Django" },
+      { src: Nodejs, alt: "Node.js", name: "Node.js" },
+      { src: Mongodb, alt: "MongoDB", name: "MongoDB" },
+      { src: Mysql, alt: "MySQL", name: "MySQL" },
+      { src: Oracle, alt: "Oracle", name: "Oracle" },
+      { src: sql, alt: "SQL", name: "SQL" },
+    ],
+  },
+  {
+    img: Ml,
+    title: "Machine Learning",
+    containerClass: "mlimg",
+    icons: [
+      { src: Tensorflow, alt: "TensorFlow", name: "TensorFlow" },
+      { src: Pandas, alt: "Pandas", name: "Pandas" },
+      { src: Numpy, alt: "NumPy", name: "NumPy" },
+      { src: Sklearn, alt: "Scikit-Learn", name: "Scikit-Learn" },
+    ],
+  },
+];
+
 export default function SkillComponents() {
-    return (
-        <section className='skill-cont'>
-            <div className='d-flex align-items-center g-5 mb-0 skill-tital'>
-                
-                <div className='spic'>
-                    <img src={skill} alt="Skill Icon" className="img-fluid" />
+  return (
+    <section className="skill-cont">
+      <div className="skill-tital">
+        <div className="spic">
+          <img src={skill} alt="Skill Icon" className="img-fluid" />
+        </div>
+        <h2>Skills</h2>
+      </div>
+
+      <p>
+        Skilled in C, Java, and Python with full-stack web development and ML expertise —
+        spanning frontend, backend, data science, and intelligent systems.
+      </p>
+
+      <div className="row">
+        {categories.map((cat, ci) => (
+          <div key={ci} className="col-md-3">
+            <img src={cat.img} alt={cat.title} className="img-fluid" />
+            <h3>{cat.title}</h3>
+            <div className={cat.containerClass}>
+              {cat.icons.map((icon, ii) => (
+                <div className="skill-icon" key={ii} data-name={icon.name}>
+                  <img src={icon.src} alt={icon.alt} />
                 </div>
-                <h2>Skills</h2>
+              ))}
             </div>
-
-            <p>
-                I am a skilled programmer in C, Java, and Python with expertise as a Full Stack Web Developer and Machine Learning Developer.
-                My skill set spans frontend and backend development, data science, and creative design.
-            </p>
-
-            <div className="row">
-                {/* Coding Skills */}
-                <div className="col-md-3 pic1">
-                    <img src={coding} alt="coding" className="img-fluid" />
-                    <h3>Coding Skills</h3>
-                    <div className="cimg">
-                        <div className="skill-icon" data-name="C"><img src={C} alt="C" /></div>
-                        <div className="skill-icon" data-name="Python"><img src={Python} alt="Python" /></div>
-                        <div className="skill-icon" data-name="Java"><img src={Java} alt="Java" /></div>
-                    </div>
-                </div>
-
-                {/* Frontend Development */}
-                <div className="col-md-3 pic2">
-                    <img src={fullstack} alt="fullstack" className="img-fluid" />
-                    <h3>Frontend Development</h3>
-                    <div className="fimg">
-                        <div className="skill-icon" data-name="HTML"><img src={Html} alt="HTML" /></div>
-                        <div className="skill-icon" data-name="CSS"><img src={Css} alt="CSS" /></div>
-                        <div className="skill-icon" data-name="JavaScript"><img src={Js} alt="JavaScript" /></div>
-                        <div className="skill-icon" data-name="Bootstrap"><img src={Bootstrap} alt="Bootstrap" /></div>
-                        <div className="skill-icon" data-name="React"><img src={ReactLogo} alt="React" /></div>
-                    </div>
-                </div>
-
-                {/* Backend Development */}
-                <div className="col-md-3 pic3">
-                    <img src={db} alt="Database" className="img-fluid" />
-                    <h3>Backend Development</h3>
-                    <div className="dimg">
-                        <div className="skill-icon" data-name="Flask"><img src={Flask} alt="Flask" /></div>
-                        <div className="skill-icon" data-name="Django"><img src={Django} alt="Django" /></div>
-                        <div className="skill-icon" data-name="Node.js"><img src={Nodejs} alt="Node.js" /></div>
-                        <div className="skill-icon" data-name="MongoDB"><img src={Mongodb} alt="MongoDB" /></div>
-                        <div className="skill-icon" data-name="MySQL"><img src={Mysql} alt="MySQL" /></div>
-                        <div className="skill-icon" data-name="Oracle"><img src={Oracle} alt="Oracle" /></div>
-                        <div className="skill-icon" data-name="SQL"><img src={sql} alt="SQL" /></div>
-                    </div>
-                </div>
-
-                {/* Machine Learning */}
-                <div className="col-md-3 pic4">
-                    <img src={Ml} alt="ML" className="img-fluid" />
-                    <h3>Machine Learning</h3>
-                    <div className="mlimg">
-                        <div className="skill-icon" data-name="TensorFlow"><img src={Tensorflow} alt="TensorFlow" /></div>
-                        <div className="skill-icon" data-name="Pandas"><img src={Pandas} alt="Pandas" /></div>
-                        <div className="skill-icon" data-name="NumPy"><img src={Numpy} alt="NumPy" /></div>
-                        <div className="skill-icon" data-name="Scikit-Learn"><img src={Sklearn} alt="Scikit-Learn" /></div>
-                    </div>
-                </div>
-            </div>
-        </section>
-    );
+          </div>
+        ))}
+      </div>
+    </section>
+  );
 }

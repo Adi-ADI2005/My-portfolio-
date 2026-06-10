@@ -1,219 +1,136 @@
-/* ============================
-   Skill Section Base Styles
-============================ */
 .skill-cont {
-    color: white;
-    padding: 5% 0;
-    position: relative;
-    overflow: hidden;
-    z-index: 1;
-    height: 100%;
-    background-color: #0d0d0d;
-    padding-left: 2%;
-    padding-right: 2%;
+  color: white;
+  padding: 36px 16px;
+  position: relative;
+  overflow: hidden;
+  background: transparent;
 }
 
-/* Section Header */
-.skill-cont .skill-tital {
-    display: flex;
-    align-items: center;
-    gap: 20px;
-    margin-bottom: 2rem;
-    flex-wrap: wrap;
+.skill-tital {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 10px;
+  flex-wrap: wrap;
+}
+.skill-tital h2 {
+  font-size: clamp(1.8rem, 3.5vw, 2.6rem);
+  font-weight: 800;
+  background: linear-gradient(135deg, #fff, rgba(255,255,255,0.7));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  letter-spacing: -0.3px;
+}
+.skill-tital .spic img {
+  width: 48px; height: 48px;
+  border-radius: 12px;
+  border: 1px solid rgba(255,255,255,0.1);
 }
 
-.skill-cont .skill-tital h2 {
-    font-size: 4.5rem;
-    font-weight: 700;
-    color: #75f94c;
+.skill-cont > p {
+  font-size: 0.88rem;
+  color: rgba(255,255,255,0.45);
+  margin-bottom: 32px;
+  max-width: 580px;
+  line-height: 1.7;
 }
 
-.skill-cont .spic img {
-    width: 100px;
-    height: 80px;
+.skill-cont .row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  margin: 0;
+}
+.skill-cont .row > div {
+  flex: 1 1 190px;
+  background: rgba(255,255,255,0.03);
+  border: 1px solid rgba(255,255,255,0.07);
+  border-radius: 16px;
+  padding: 20px 14px;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+.skill-cont .row > div::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(229,9,20,0.5), transparent);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+.skill-cont .row > div:hover {
+  background: rgba(229,9,20,0.05);
+  border-color: rgba(229,9,20,0.22);
+  transform: translateY(-4px);
+  box-shadow: 0 12px 32px rgba(229,9,20,0.1);
+}
+.skill-cont .row > div:hover::before { opacity: 1; }
+.skill-cont .row > div > img {
+  width: 48px; height: 48px;
+  border-radius: 10px;
+  margin-bottom: 8px;
+  border: 1px solid rgba(255,255,255,0.08);
+}
+.skill-cont .row > div h3 {
+  font-size: 0.74rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  color: rgba(255,255,255,0.38);
+  margin-bottom: 14px;
 }
 
-/* Description */
-.skill-cont p {
-    font-size: 0.9rem;
-    margin-bottom: 2rem;
-    text-align: center;
+.cimg, .fimg, .dimg, .mlimg {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 12px;
+  margin: 0;
 }
-
-/* Section Titles & Skill Images */
-.skill-cont .row .pic1 img,
-.skill-cont .row .pic2 img,
-.skill-cont .row .pic3 img,
-.skill-cont .row .pic4 img {
-    width: 70px;
-    height: 70px;
-    border-radius: 50%;
-    margin-bottom: 0.5rem;
-}
-
-/* ============================
-   Skill Icon Grid Containers
-============================ */
-.cimg,
-.fimg,
-.dimg,
-.mlimg {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 25px;
-    margin-top: 1rem;
-    margin-bottom: 50px;
-}
-
-/* ============================
-   Skill Icon Styles
-============================ */
 .skill-icon {
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 70px;
-    height: 70px;
-    border-radius: 50%;
-    background-color: #222;
-    cursor: pointer;
-    transition: transform 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 58px; height: 58px;
+  border-radius: 14px;
+  background: rgba(255,255,255,0.04);
+  border: 1px solid rgba(255,255,255,0.08);
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.25,0.46,0.45,0.94);
 }
-
-.skill-icon img {
-    width: 60%;
-    height: 60%;
-    object-fit: contain;
-    border-radius: 50%;
-    transition: transform 0.3s ease;
-}
-
-/* Scale effect on hover */
+.skill-icon img { width: 56%; height: 56%; object-fit: contain; transition: transform 0.3s ease; }
 .skill-icon:hover {
-    transform: scale(1.2);
-    background-color: #333;
-    box-shadow: 0 0 15px #75f94c;
+  transform: translateY(-5px) scale(1.1);
+  background: rgba(229,9,20,0.1);
+  border-color: rgba(229,9,20,0.42);
+  box-shadow: 0 8px 24px rgba(229,9,20,0.22);
 }
-
-/* ============================
-   Tooltip to Show Skill Name
-============================ */
+.skill-icon:hover img { transform: scale(1.1); }
 .skill-icon::after {
-    content: attr(data-name);  
-    position: absolute;
-    top: -30px;
-    left: 50%;
-    transform: translateX(-50%);
-    background-color: #333;
-    color: #fff;
-    padding: 4px 8px;
-    font-size: 12px;
-    border-radius: 4px;
-    white-space: nowrap;
-    opacity: 0;
-    pointer-events: none;
-    transition: opacity 0.3s ease, transform 0.3s ease;
-    z-index: 999;
+  content: attr(data-name);
+  position: absolute;
+  top: -32px; left: 50%;
+  transform: translateX(-50%);
+  background: rgba(10,10,10,0.95);
+  border: 1px solid rgba(229,9,20,0.3);
+  color: #fff;
+  padding: 3px 9px;
+  font-size: 11px;
+  font-weight: 500;
+  border-radius: 6px;
+  white-space: nowrap;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.2s, transform 0.2s;
+  z-index: 99;
 }
+.skill-icon:hover::after { opacity: 1; transform: translateX(-50%) translateY(-3px); }
 
-.skill-icon:hover::after {
-    opacity: 1;
-    transform: translateX(-50%) translateY(-5px);
-}
-
-/* ==== STAR BACKGROUND EFFECT ==== */
-.stars {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: transparent;
-    z-index: 0;
-    pointer-events: none;
-}
-
-.star {
-    position: absolute;
-    background: white;
-    border-radius: 50%;
-    width: 2px;
-    height: 2px;
-    animation: twinkle 2s infinite ease-in-out;
-    opacity: 0.8;
-}
-
-@keyframes twinkle {
-    0%, 100% {
-        opacity: 0.2;
-        transform: scale(1);
-    }
-    50% {
-        opacity: 1;
-        transform: scale(1.5);
-    }
-}
-
-/* ============================
-   Responsive Styles
-============================ */
-@media screen and (max-width: 992px) {
-    .skill-cont .skill-tital h2 {
-        font-size: 3.5rem;
-    }
-    .skill-cont .spic img {
-        width: 90px;
-        height: 70px;
-    }
-}
-
-@media screen and (max-width: 600px) {
-    .skill-cont .skill-tital {
-        flex-direction: column;
-        gap: 15px;
-        text-align: center;
-    }
-
-    .skill-cont .skill-tital h2 {
-        font-size: 3rem;
-        font-weight: 500;
-    }
-
-    .skill-cont .spic img {
-        width: 80px;
-        height: 60px;
-    }
-
-    .skill-icon {
-        width: 55px;
-        height: 55px;
-    }
-
-    .skill-icon img {
-        width: 60%;
-        height: 60%;
-    }
-
-    .cimg, .fimg, .dimg, .mlimg {
-        gap: 20px;
-        margin-bottom: 40px;
-    }
-}
-
-@media screen and (max-width: 400px) {
-    .skill-cont .skill-tital h2 {
-        font-size: 2.5rem;
-    }
-
-    .skill-cont .spic img {
-        width: 70px;
-        height: 50px;
-    }
-
-    .skill-icon {
-        width: 50px;
-        height: 50px;
-    }
+@media (max-width: 600px) {
+  .skill-cont .row > div { flex: 1 1 150px; padding: 16px 10px; }
+  .skill-icon { width: 50px; height: 50px; }
 }
